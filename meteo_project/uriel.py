@@ -1,7 +1,8 @@
 #exerice 1
 
-def math ():
-   uriel= " je m'appelle kevin"
+def fonction ():
+   uriel= " je vis à Massy"
    print(uriel)
 
 
+fonction()
