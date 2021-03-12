@@ -2,7 +2,8 @@
 
 def fonction ():
    uriel= " je vis à Massy"
-   print(uriel)
+   paul = "contrairement à mes amis"
+   print(uriel "," paul)
 
 
 fonction()
