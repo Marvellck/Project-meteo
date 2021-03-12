@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    
+    tools {nodejs "node"}
+    stages {
+        stage('clone') {
+            steps {
+                sh "rm -rf *"
+                sh 'git clone https://github.com/Marvellck/Project-meteo'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'npm install '
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'node ./server.js'}
+        }
+        /*
+        stage('run') {
+            steps {
+                sh 'npm  start'
+            }
+        }
+        
+        
+        post {
+            failure {
+                echo 'processing failed'
+            }
+            success {
+                echo 'Processing succeeded'
+            }
+        }
+        */
+    }
+}
